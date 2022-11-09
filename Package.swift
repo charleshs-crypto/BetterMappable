@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -15,12 +15,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/tristanhimmelman/ObjectMapper.git",
-            from: "3.5.1"
+            exact: "4.2.0"
         )
     ],
     targets: [
         .target(name: "BetterMappable", dependencies: ["ObjectMapper"], path: "Source"),
         .testTarget(name: "BetterMappableTests", dependencies: ["BetterMappable"], path: "Tests")
-    ],
-    swiftLanguageVersions: [.version("5.1")]
+    ]
 )
